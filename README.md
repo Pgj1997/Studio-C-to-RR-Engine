@@ -1,4 +1,4 @@
-Convert showtape singnals from Chuck E. Cheese "Studio C" showtapes, and convert them into `.sshw` files for games that use [RR-Engine](https://github.com/sam-tovar/RR-Engine)
+Converts showtape singnals from Chuck E. Cheese "Studio C" showtapes into `.sshw` files for games that use [RR-Engine](https://github.com/sam-tovar/RR-Engine)
 
 Usage:
 From terminal:
