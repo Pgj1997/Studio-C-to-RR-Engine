@@ -4,7 +4,7 @@ cec_to_sshw.py  -  Convert a "Studio C" .CEC showtape into an
 RR-Engine / RetroMation .sshw showtape (audio embedded).
 
 Usage:
-    python3 cec_to_sshw.py APR0101.CEC APR0101.mp4 [-o APR0101.sshw]
+    python3 cec_to_sshw.py (data).CEC (video).mp4 [-o (output).sshw]
 
 Requires: python3 and ffmpeg on PATH (used only to pull the audio out of the video).
 
