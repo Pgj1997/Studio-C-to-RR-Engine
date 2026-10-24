@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """
-cec_to_sshw.py  -  Convert a "Studio C" .CEC showtape into an
+cec_to_sshw.py  -  Convert a Creative Engineering "Studio C" .CEC showtape into an
 RR-Engine / RetroMation .sshw showtape (audio embedded).
 
 Usage:
-    python3 cec_to_sshw.py (data).CEC (video).mp4 [-o (output).sshw]
+    python3 cec_to_sshw.py APR0101.CEC APR0101.mp4 [-o APR0101.sshw] [--e-time SECONDS]
+
+    --e-time SECONDS  audio time of the *E marker (default -1.237). Lower = movement
+                      plays earlier, higher = later. One beat is 0.4286 s, so
+                      -1.237, -0.808, -0.380 and 0.049 are the natural candidates;
+                      fine-tune in 0.05 steps from there.
 
 Requires: python3 and ffmpeg on PATH (used only to pull the audio out of the video).
 
@@ -54,7 +59,7 @@ import argparse, json, os, re, struct, subprocess, sys, tempfile, wave
 
 # ----------------------------------------------------------------- parameters
 TICK_RATE = 28.898
-E_TIME = -0.237
+E_TIME = -1.237
 OUT_FPS = 60
 # absolute bit number (1-based, 1..300) = DEVICE_BASE[device] + cec_bit
 DEVICE_BASE = {0: 0, 1: 32, 2: 150, 3: 182}
