@@ -6,4 +6,4 @@ From terminal:
 
 The script expects an MP4 file for the audio.
 
-If the signals are desynced, append `--e-time` to the command followed and mess around with the values and reconvert. The default value is **-1.237**, and from my testing, either **0.1237** or **1.237** are good numbers to test first.
+If the signals are desynced, append `--e-time` to the command followed by a value. Mess around with the values and reconvert. The default value is **-1.237**, and from my testing, either **0.1237** or **1.237** are good numbers to test first.
